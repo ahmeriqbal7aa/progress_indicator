@@ -10,8 +10,14 @@ samples, guidance on mobile development, and a full API reference.
 
 Some Interpretations
 
-A Flutter Progress Indicator: ```Linear-Circular``` and ```Determinate-Indeterminate```
+A Flutter Progress Indicator App ```without any Package``` with following Concepts:
+- Determinate and Indeterminate Indicator
+- Linear and Circular Indicator
 
-# Screenshots
+# Screenshot
+
+<img src="https://user-images.githubusercontent.com/73339220/104403370-35af8b00-557a-11eb-9093-357b09c20178.jpg" width=300 />
 
 # Working
+
+< img src="https://user-images.githubusercontent.com/73339220/104403428-4eb83c00-557a-11eb-93bf-6a71ff6772e4.gif" with=300 />
