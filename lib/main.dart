@@ -31,7 +31,9 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
-            children: [],
+            children: [
+              CircularProgressIndicator(),
+            ],
           ),
         ),
       ),
