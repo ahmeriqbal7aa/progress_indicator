@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
+// import 'dart:async';
 
 void main() => runApp(MyApp());
 
@@ -21,20 +21,48 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   double _initial = 0.0;
   //TODO Create Function
-  // which update the indicator periodically
-  void updateIndicator() {
-    Timer.periodic(Duration(milliseconds: 100), (timer) {
-      setState(() {
-        _initial = _initial + 0.01;
-      });
-    });
+  // // which update the indicator periodically
+  // void updateIndicator() {
+  //   Timer.periodic(Duration(milliseconds: 100), (timer) {
+  //     setState(() {
+  //       _initial = _initial + 0.01;
+  //     });
+  //   });
+  // }
+
+  //TODO Create Widget
+  Widget _stepIndicator() {
+    // As we have 5 steps so we multiply 5 with initial value
+    // [0] mean we want just first value (not in points)
+    String value = (_initial * 5).toString()[0];
+    return Column(
+      children: [
+        Text('Step $value of 5 Completed'),
+        SizedBox(height: 25.0),
+        LinearProgressIndicator(
+          value: _initial,
+          minHeight: 15.0,
+          backgroundColor: Colors.black,
+          valueColor: AlwaysStoppedAnimation(Colors.green),
+        ),
+        SizedBox(height: 25.0),
+        RaisedButton(
+          onPressed: () {
+            setState(() {
+              _initial = _initial + 0.2;
+            });
+          },
+          child: Text('Next'),
+        )
+      ],
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    updateIndicator();
+    // here updateIndicator Function call
+    // updateIndicator();
     return Scaffold(
-      backgroundColor: Colors.grey,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.purple,
         onPressed: () {},
@@ -47,18 +75,19 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-              LinearProgressIndicator(
-                value: _initial,
-                minHeight: 15.0,
-                backgroundColor: Colors.black,
-                valueColor: AlwaysStoppedAnimation(Colors.green),
-              ),
-              SizedBox(height: 50.0),
-              CircularProgressIndicator(
-                value: _initial,
-                backgroundColor: Colors.black,
-                valueColor: AlwaysStoppedAnimation(Colors.green),
-              ),
+              _stepIndicator()
+              // LinearProgressIndicator(
+              //   value: _initial,
+              //   minHeight: 15.0,
+              //   backgroundColor: Colors.black,
+              //   valueColor: AlwaysStoppedAnimation(Colors.green),
+              // ),
+              // SizedBox(height: 50.0),
+              // CircularProgressIndicator(
+              //   value: _initial,
+              //   backgroundColor: Colors.black,
+              //   valueColor: AlwaysStoppedAnimation(Colors.green),
+              // ),
             ],
           ),
         ),
