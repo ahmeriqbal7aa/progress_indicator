@@ -8,7 +8,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-Some Interpretations
+# Some Interpretations
 
 A Flutter Progress Indicator App ```without any Package``` with following Concepts:
 - Determinate and Indeterminate Indicator
@@ -20,4 +20,4 @@ A Flutter Progress Indicator App ```without any Package``` with following Concep
 
 # Working
 
-< img src="https://user-images.githubusercontent.com/73339220/104403428-4eb83c00-557a-11eb-93bf-6a71ff6772e4.gif" with=300 />
+<img src="https://user-images.githubusercontent.com/73339220/104403428-4eb83c00-557a-11eb-93bf-6a71ff6772e4.gif" with=300 />
