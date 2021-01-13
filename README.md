@@ -20,4 +20,4 @@ A Flutter Progress Indicator App ```without any Package``` with following Concep
 
 # Working
 
-<img src="https://user-images.githubusercontent.com/73339220/104403428-4eb83c00-557a-11eb-93bf-6a71ff6772e4.gif" with=300 />
+<img src="https://user-images.githubusercontent.com/73339220/104403428-4eb83c00-557a-11eb-93bf-6a71ff6772e4.gif" width=300 />
