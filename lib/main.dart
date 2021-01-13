@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 void main() => runApp(MyApp());
 
@@ -18,12 +19,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  double _initial = 0.0;
+  //TODO Create Function
+  // which update the indicator periodically
+  void updateIndicator() {
+    Timer.periodic(Duration(milliseconds: 100), (timer) {
+      setState(() {
+        _initial = _initial + 0.01;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    updateIndicator();
     return Scaffold(
+      backgroundColor: Colors.grey,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.purple,
         onPressed: () {},
-        child: Icon(Icons.file_download),
+        child: Icon(Icons.file_download, color: Colors.black, size: 35.0),
       ),
       body: Center(
         child: Padding(
@@ -33,11 +48,16 @@ class _HomePageState extends State<HomePage> {
             mainAxisSize: MainAxisSize.max,
             children: [
               LinearProgressIndicator(
-                value: 0.5,
+                value: _initial,
+                minHeight: 15.0,
+                backgroundColor: Colors.black,
+                valueColor: AlwaysStoppedAnimation(Colors.green),
               ),
-              SizedBox(height: 10.0),
+              SizedBox(height: 50.0),
               CircularProgressIndicator(
-                value: 0.5,
+                value: _initial,
+                backgroundColor: Colors.black,
+                valueColor: AlwaysStoppedAnimation(Colors.green),
               ),
             ],
           ),
