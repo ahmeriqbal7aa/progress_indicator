@@ -32,6 +32,8 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
+              LinearProgressIndicator(),
+              SizedBox(height: 10.0),
               CircularProgressIndicator(),
             ],
           ),
